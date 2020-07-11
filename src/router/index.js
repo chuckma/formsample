@@ -58,104 +58,45 @@ export const constantRoutes = [
   {
     path: '/example',
     component: Layout,
-    redirect: '/example/table',
+    redirect: '',
     name: 'Example',
-    meta: { title: 'Example', icon: 'el-icon-s-help' },
+    meta: { title: '流调登记', icon: 'el-icon-s-help' },
     children: [
       {
-        path: 'table',
-        name: 'Table',
-        component: () => import('@/views/table/index'),
-        meta: { title: 'Table', icon: 'table' }
+        path: 'fast',
+        name: 'fast',
+        component: () => import('@/views/fast/index'),
+        meta: { title: '快速流行病调查', icon: 'table' }
       },
       {
-        path: 'tree',
-        name: 'Tree',
-        component: () => import('@/views/tree/index'),
-        meta: { title: 'Tree', icon: 'tree' }
-      }
-    ]
-  },
-
-  {
-    path: '/form',
-    component: Layout,
-    children: [
-      {
-        path: 'index',
-        name: 'Form',
-        component: () => import('@/views/form/index'),
-        meta: { title: 'Form', icon: 'form' }
-      }
-    ]
-  },
-
-  {
-    path: '/nested',
-    component: Layout,
-    redirect: '/nested/menu1',
-    name: 'Nested',
-    meta: {
-      title: 'Nested',
-      icon: 'nested'
-    },
-    children: [
-      {
-        path: 'menu1',
-        component: () => import('@/views/nested/menu1/index'), // Parent router-view
-        name: 'Menu1',
-        meta: { title: 'Menu1' },
-        children: [
-          {
-            path: 'menu1-1',
-            component: () => import('@/views/nested/menu1/menu1-1'),
-            name: 'Menu1-1',
-            meta: { title: 'Menu1-1' }
-          },
-          {
-            path: 'menu1-2',
-            component: () => import('@/views/nested/menu1/menu1-2'),
-            name: 'Menu1-2',
-            meta: { title: 'Menu1-2' },
-            children: [
-              {
-                path: 'menu1-2-1',
-                component: () => import('@/views/nested/menu1/menu1-2/menu1-2-1'),
-                name: 'Menu1-2-1',
-                meta: { title: 'Menu1-2-1' }
-              },
-              {
-                path: 'menu1-2-2',
-                component: () => import('@/views/nested/menu1/menu1-2/menu1-2-2'),
-                name: 'Menu1-2-2',
-                meta: { title: 'Menu1-2-2' }
-              }
-            ]
-          },
-          {
-            path: 'menu1-3',
-            component: () => import('@/views/nested/menu1/menu1-3'),
-            name: 'Menu1-3',
-            meta: { title: 'Menu1-3' }
-          }
-        ]
+        path: 'covid',
+        name: 'covid',
+        component: () => import('@/views/covid/index'),
+        meta: { title: '新冠调查登记', icon: 'table' }
       },
       {
-        path: 'menu2',
-        component: () => import('@/views/nested/menu2/index'),
-        name: 'Menu2',
-        meta: { title: 'menu2' }
-      }
-    ]
-  },
-
-  {
-    path: 'external-link',
-    component: Layout,
-    children: [
+        path: 'covid2',
+        name: 'covid2',
+        component: () => import('@/views/covid2/index'),
+        meta: { title: '新冠调查登记2', icon: 'table' }
+      },
       {
-        path: 'https://panjiachen.github.io/vue-element-admin-site/#/',
-        meta: { title: 'External Link', icon: 'link' }
+        path: 'transfer2',
+        name: 'transfer2',
+        component: () => import('@/views/transfer2/index'),
+        meta: { title: '防控重点人群移交记录单', icon: 'table' }
+      },
+      {
+        path: 'transfer',
+        name: 'transfer',
+        component: () => import('@/views/transfer/index'),
+        meta: { title: '染疫人转移单', icon: 'table' }
+      },
+      {
+        path: 'report',
+        name: 'report',
+        component: () => import('@/views/report/index'),
+        meta: { title: '染疫人情况报告单', icon: 'table' }
       }
     ]
   },
