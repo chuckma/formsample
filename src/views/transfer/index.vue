@@ -45,6 +45,7 @@
           </el-form-item>
           <el-form-item>
             <el-button type="primary" icon="el-icon-search" size="mini" @click="handleQuery">查询</el-button>
+            <el-button type="primary" size="mini" @click="handleQuery">扫描二维码</el-button>
             <el-button icon="el-icon-end" size="mini" @click="resetQuery">结束流程</el-button>
           </el-form-item>
         </el-form>
